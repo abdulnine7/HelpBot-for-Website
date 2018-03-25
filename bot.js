@@ -1,6 +1,6 @@
 //CHAT WINDOW JS
-$(document).on('click', '.panel-heading span.icon_minim', function (e) {
-    var $this = $(this);
+$(document).on('click', '.panel-heading', function (e) {
+    var $this = $(".panel-heading span.icon_minim");
     if (!$this.hasClass('panel-collapsed')) {
         $this.parents('.panel').find('.panel-body').slideUp();
         $this.addClass('panel-collapsed');

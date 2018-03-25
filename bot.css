@@ -2,6 +2,13 @@
 .panel{
     margin-bottom: 0px;
 }
+
+.panel-title{
+    -webkit-user-select: none; /* Safari */        
+    -moz-user-select: none; /* Firefox */
+    -ms-user-select: none; /* IE10+/Edge */
+    user-select: none; /* Standard */
+}
 .chat-window{
     bottom:0;
     position:fixed;
@@ -64,6 +71,12 @@
 /*CHATBOT CSS*/
 .chatbox_window{
     width: 105%;
+}
+.chat_messages{
+    -webkit-user-select: none; /* Safari */        
+    -moz-user-select: none; /* Firefox */
+    -ms-user-select: none; /* IE10+/Edge */
+    user-select: none; /* Standard */
 }
 .mytext{
     border:0;padding:10px;background:whitesmoke;
