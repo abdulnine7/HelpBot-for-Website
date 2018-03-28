@@ -18,7 +18,7 @@ var me = {};
 me.avatar = ""; //USER AVTAR HERE
 
 var you = {};
-you.avatar = "Avtar_48x48.jpg";
+you.avatar = "icon.png";
 
 function formatAMPM(date) {
     var hours = date.getHours();
