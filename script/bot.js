@@ -78,7 +78,28 @@ function ask_question(question, show_question) {
                 var response = JSON.parse(this.responseText);
                 console.log(response);
                 var answer = response[0].response.answer;
-                insertChat("you", answer,0); 
+                var question = response[0].response.question;
+                if(answer == "Sorry, I don't have an answer for that!"){
+                	var control = "";
+					var date = formatAMPM(new Date());
+					control = '<li style="width:100%;">' +
+                        '<div class="msj-rta macro">' +
+                            '<div class="text text-r">' +
+                                '<p>Sorry, I don\'t have an answer for that! Do you want ot search google for that? <br><br><a href="https://www.google.co.in/search?q='+ question +'" target="_blank"><button style="background-color :#4CAF50; color :white; padding :5px 10px;font-size :12px;cursor :pointer;">Search Google >></button></a></p>' +
+                                '<p><small>'+date+'</small></p>' +
+                            '</div>' +
+                        '<div class="avatar" style="padding:0px 0px 0px 10px !important"><img class="img-circle" style="width:100%;" src="'+you.avatar+'" /></div>' +                                
+                  '</li>';
+						
+					setTimeout(
+					function(){                        
+						$("ul").append(control).scrollTop($("ul").prop('scrollHeight'));
+					}, 0);		    
+					
+					   
+                } else {
+                insertChat("you", answer,0);
+                } 
             }
         }
 
